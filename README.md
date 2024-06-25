@@ -1,3 +1,26 @@
+# A short text document that lists the main steps of building your solution as well as
+# all assumptions/decisions you made in case of unclear requirements or missing
+# information.
+## Steps to Build the Yassir App:
+1. Project Setup:
+
+Initialized the project using create-react-app to set up the initial project structure and configurations.
+Installed  Material-UI library and it's dependencies.
+
+2. Project Structure:
+
+Created a folder structure to organize components, assets, services, and styles.
+/src
+  /components
+  /mocks
+  /types
+  /views
+  App.js
+  index.js
+
+## Assumptions and Decisions:
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
