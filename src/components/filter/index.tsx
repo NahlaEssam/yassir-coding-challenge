@@ -54,8 +54,10 @@ function Filters({ handleFilter }) {
         handleFilter(basicFilters)
     }
     return (
-        <Box sx={{ padding: '15px', border: 'solid 1px lightgray', borderRadius: '5px',
-            marginBottom: '15px', display: 'flex', justifyContent: 'space-between' }} >
+        <Box sx={{
+            padding: '15px', border: 'solid 1px lightgray', borderRadius: '5px',
+            marginBottom: '15px', display: 'flex', justifyContent: 'space-between'
+        }} >
             <FormControl>
                 <InputLabel>Status:</InputLabel>
                 <Select
@@ -65,7 +67,7 @@ function Filters({ handleFilter }) {
                     onChange={(e) => handleChange('status', e)}
                 > {
                         statusFilter.map(sFilter => (
-                            <MenuItem value={sFilter.value}>{sFilter.key}</MenuItem>
+                            <MenuItem key={sFilter.id} value={sFilter.value}>{sFilter.key}</MenuItem>
                         ))
                     }
                 </Select>
@@ -87,7 +89,7 @@ function Filters({ handleFilter }) {
                 >
                     {
                         shiftFilter.map(sFilter => (
-                            <MenuItem value={sFilter.value}>{sFilter.key}</MenuItem>
+                            <MenuItem key={sFilter.id} value={sFilter.value}>{sFilter.key}</MenuItem>
                         ))
                     }
                 </Select>
@@ -103,7 +105,7 @@ function Filters({ handleFilter }) {
 
                     {
                         areaFilter.map(aFilter => (
-                            <MenuItem value={aFilter.value}>{aFilter.key}</MenuItem>
+                            <MenuItem key={aFilter.id} value={aFilter.value}>{aFilter.key}</MenuItem>
                         ))
                     }
 

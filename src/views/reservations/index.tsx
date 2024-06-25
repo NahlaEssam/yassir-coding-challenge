@@ -90,7 +90,7 @@ function ReservationView() {
             </div>
             <div className='results-label'> Results: </div>
             {reservations.length !== 0 && reservations.map(item => (
-                <ReservationItem reservation={item} />
+                <ReservationItem  key={item.id} reservation={item} />
             ))}
             {reservations.length === 0 && (<div className='no-results-text'>No Reservations</div>)}
         </div>
