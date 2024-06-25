@@ -36,4 +36,4 @@ const areaFilter = [{
 }];
 
 
-export { statusFilter , shiftFilter, areaFilter};
+export { statusFilter, shiftFilter, areaFilter };

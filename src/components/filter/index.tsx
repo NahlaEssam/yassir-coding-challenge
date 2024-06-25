@@ -57,11 +57,9 @@ function Filters({ handleFilter }) {
         <Box sx={{ padding: '15px', border: 'solid 1px lightgray', borderRadius: '5px',
             marginBottom: '15px', display: 'flex', justifyContent: 'space-between' }} >
             <FormControl>
-                <InputLabel id="demo-simple-select-label">Status:</InputLabel>
+                <InputLabel>Status:</InputLabel>
                 <Select
                     className='filter-item'
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
                     value={statusValue}
                     label="Age"
                     onChange={(e) => handleChange('status', e)}
@@ -80,11 +78,9 @@ function Filters({ handleFilter }) {
             </LocalizationProvider>
 
             <FormControl >
-                <InputLabel id="demo-simple-select-label">Shift:</InputLabel>
+                <InputLabel>Shift:</InputLabel>
                 <Select
                     className='filter-item'
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
                     value={shitfValue}
                     label="Age"
                     onChange={(e) => handleChange('shift', e)}
@@ -97,11 +93,9 @@ function Filters({ handleFilter }) {
                 </Select>
             </FormControl>
             <FormControl >
-                <InputLabel id="demo-simple-select-label">Area:</InputLabel>
+                <InputLabel>Area:</InputLabel>
                 <Select
                     className='filter-item'
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
                     value={areaValue}
                     label="Age"
                     onChange={(e) => handleChange('area', e)}

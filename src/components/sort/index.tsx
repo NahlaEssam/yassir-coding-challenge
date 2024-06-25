@@ -19,8 +19,6 @@ function Sort({ handleSort }) {
                 <InputLabel id="demo-simple-select-label">Sort by:</InputLabel>
                 <Select
                     className='sort-item'
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
                     value={sortValue}
                     label="Age"
                     onChange={(e) => handleChange(e)}

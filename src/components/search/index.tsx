@@ -1,6 +1,6 @@
 import React from 'react';
 import './search.scss';
-import { Box, FormControl, InputLabel, TextField } from '@mui/material';
+import { Box, FormControl, TextField } from '@mui/material';
 
 
 function Search({ handleSearch }) {
@@ -18,7 +18,6 @@ function Search({ handleSearch }) {
         }
     };
 
-
     return (
         <Box>
             <FormControl className='search-form-control'>
@@ -26,8 +25,6 @@ function Search({ handleSearch }) {
                 <div className='inputs-container'>
                     <div className='search-item'>
                         <TextField
-
-                            id="outlined-controlled"
                             label="First Name"
                             value={firstName}
                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,8 +34,6 @@ function Search({ handleSearch }) {
                     </div>
                     <div className='search-item'>
                         <TextField
-
-                            id="outlined-controlled"
                             label="Last Name"
                             value={lastName}
                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {

@@ -89,7 +89,7 @@ function ReservationView() {
                 <Sort handleSort={sortReservations} />
             </div>
             <div className='results-label'> Results: </div>
-            {reservations.length !== 0  && reservations.map(item => (
+            {reservations.length !== 0 && reservations.map(item => (
                 <ReservationItem reservation={item} />
             ))}
             {reservations.length === 0 && (<div className='no-results-text'>No Reservations</div>)}
