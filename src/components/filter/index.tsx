@@ -10,32 +10,34 @@ import dayjs, { Dayjs } from 'dayjs';
 function Filters({ handleFilter }) {
     const basicFilters = {
         status: '',
-        date: '',
+        date: undefined,
         shift: '',
         area: ''
     }
     const [filter, setFilter] = React.useState(basicFilters);
     const [statusValue, setStatusValue] = React.useState('');
-    const [dateValue, setDateValue] = React.useState('');
+    const [dateValue, setDateValue] = React.useState(undefined);
     const [shitfValue, setShitfValue] = React.useState('');
     const [areaValue, setAreaValue] = React.useState('');
 
     const handleChange = (key: string, event: SelectChangeEvent) => {
+        const value = event.target.value;
         if (key === 'status') {
-            setStatusValue(event.target.value)
+            setStatusValue(value);
         } else if (key === 'shift') {
-            setShitfValue(event.target.value)
+            setShitfValue(value)
         } else if (key === 'area') {
-            setAreaValue(event.target.value)
+            setAreaValue(value)
         } else if (key === 'date') {
-            setDateValue(event.target.value)
+            setDateValue(value)
         }
 
-        handleFilterChange(key, event.target.value);
+        handleFilterChange(key, value);
     };
     const handleDateChange = (newValue: Dayjs) => {
-        setDateValue(newValue.toDate().toDateString())
-        handleFilterChange('date', newValue.toDate().toDateString());
+        const value = newValue? newValue.toDate().toDateString(): undefined;
+        setDateValue(dayjs(value))
+        handleFilterChange('date', value);
     };
 
     const handleFilterChange = (key: string, newValue: string) => {
@@ -50,7 +52,7 @@ function Filters({ handleFilter }) {
         setStatusValue('');
         setShitfValue('');
         setAreaValue('');
-        setDateValue('');
+        setDateValue(undefined);
         handleFilter(basicFilters)
     }
     return (
@@ -74,7 +76,7 @@ function Filters({ handleFilter }) {
             </FormControl>
 
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker className='filter-item' label="Date" value={dayjs(dateValue)}
+                <DatePicker className='filter-item' label="Date" value={dateValue}
                     onChange={(newValue) => handleDateChange(newValue)} />
 
             </LocalizationProvider>
@@ -112,7 +114,7 @@ function Filters({ handleFilter }) {
                 </Select>
             </FormControl>
 
-            <Button onClick={resetFilters} variant="contained">Reset Filters</Button>
+            <Button onClick={resetFilters} className="reset-btn" variant="contained" sx={{background: 'black'}}>Reset Filters</Button>
         </Box>
     );
 }

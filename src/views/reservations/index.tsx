@@ -28,7 +28,7 @@ function ReservationView() {
                 const filterDate = new Date(filters.date);
                 const businessDate = new Date(_res.businessDate);
                 return (filters.status === '' || filters.status === _res.status) &&
-                    (filters.date === '' || filterDate.toDateString() === businessDate.toDateString()) &&
+                    (!filters.date || filterDate.toDateString() === businessDate.toDateString()) &&
                     (filters.shift === '' || filters.shift === _res.shift) &&
                     (filters.area === '' || filters.area === _res.area)
             });
