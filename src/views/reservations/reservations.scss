@@ -1,0 +1,26 @@
+.reservation-view{
+    background: white;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.sort-search-container {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px lightgray;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.results-label {
+    font-weight: bold;
+    text-align: left;
+    padding: 7px 0px;
+}
+
+.no-results-text {
+    font-size: 20px;
+    padding: 100px;
+}

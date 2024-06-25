@@ -1,0 +1,45 @@
+.reservation-card-container {
+    border: solid 1px lightgray;
+    padding: 10px 15px 15px 15px;
+    margin: 15px;
+    border-radius: 5px;
+    text-align: left;
+    .reservation-card-flex {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .id {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: lightgray;
+        border-radius: 50px;
+        color: white;
+        font-size: 13px;
+    }
+
+    .status{
+        background: lightgray;
+        border-radius: 50px;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .item-container{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        .label{
+            font-weight: bold;
+            margin-right: 7px;
+        }
+        .item {
+            font-size: 13px;
+        }
+    }
+}
+

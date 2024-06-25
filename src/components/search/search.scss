@@ -1,0 +1,12 @@
+.search-label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+.inputs-container {
+    display: flex;
+    justify-content: space-between;
+    .search-item {
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+}
