@@ -1,24 +1,27 @@
-# A short text document that lists the main steps of building your solution as well as
-# all assumptions/decisions you made in case of unclear requirements or missing
-# information.
+# Getting Started with building Yassir App
 ## Steps to Build the Yassir App:
 1. Project Setup:
 
-Initialized the project using create-react-app to set up the initial project structure and configurations.
-Installed  Material-UI library and it's dependencies.
+    Initialized the project using create-react-app to set up the initial project structure and configurations.
+    Installed  Material-UI library and it's dependencies.
 
 2. Project Structure:
 
-Created a folder structure to organize components, assets, services, and styles.
-/src
-  /components
-  /mocks
-  /types
-  /views
-  App.js
-  index.js
+    Created a folder structure to organize components, assets, services, and styles.
+    /src
+    /components
+    /mocks
+    /types
+    /views
+    App.js
+    index.js
 
 ## Assumptions and Decisions:
+1. Project Requirements:
+didn't create a separate view for the reservation card.
+
+2. Technology Stack:
+as we didn't create separate view for the reservation card , i didn't add React Router as we just have only one view.
 
 
 # Getting Started with Create React App
