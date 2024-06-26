@@ -18,10 +18,12 @@
 
 ## Assumptions and Decisions:
 1. Project Requirements:
-didn't create a separate view for the reservation card.
+- didn't create a separate view for the reservation card.
+- filtering the list took the high priority, then the sort, search.
+    - for the search we search the list after it is ordered and/sorted      
 
 2. Technology Stack:
-as we didn't create separate view for the reservation card , i didn't add React Router as we just have only one view.
+as we didn't create a separate view for the reservation card, I didn't add React Router as we just have only one view.
 
 
 # Getting Started with Create React App
